@@ -1,5 +1,25 @@
+.navbar > .container-fluid{
+    height: 60px;
+}
+
+.navbar .navbar-brand > h2{
+    font-weight: 600;
+}
+
 main{
+    height: calc(100vh - 76px - 60px);
     background-color: #011627;
+}
+
+footer{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > p{
+    margin: 0;
 }
 
 #grid{

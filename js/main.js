@@ -12,9 +12,9 @@
 const grid = document.getElementById('grid');
 
 // Ciclo per 100 volte e aggiungo ogni volta una nuova 'cell' alla 'grid'
-for (let i = 0; i < 100; i++){
-    grid.appendChild(createNewCell(i + 1));
-}
+for (let i = 1; i <= 100; i++){
+    grid.appendChild(createNewCell(i));
+} 
 
 
 
