@@ -10,12 +10,10 @@
 
 // Vado a richiamare tramite ID il div 'grid'
 const grid = document.getElementById('grid');
-console.log(grid);
 
 // Ciclo per 100 volte e aggiungo ogni volta una nuova 'cell' alla 'grid'
 for (let i = 0; i < 100; i++){
-    grid.appendChild(createNewCell());
-    console.log(this);
+    grid.appendChild(createNewCell(i + 1));
 }
 
 
@@ -24,10 +22,12 @@ for (let i = 0; i < 100; i++){
 
 /**
  * Questa funzione permette di creare un elemento 'div' ed aggiunge la classe 'cell'.
- * @returns     Restituisce l'elemento appena creato.
+ * @param {*} number    Numero che verrà inserito dentro l'html del div.cell.
+ * @returns             Restituisce l'elemento appena creato.
  */
-function createNewCell (){
+function createNewCell (number){
     const newCell = document.createElement('div');
     newCell.classList.add('cell');
+    newCell.innerHTML = `${number}`;
     return newCell;
 }
