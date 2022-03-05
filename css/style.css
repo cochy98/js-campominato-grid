@@ -1,6 +1,21 @@
-.grid{
+main{
+    background-color: #011627;
+}
+
+#grid{
     width: 500px;
     height: 500px;
-    border: 3px solid red;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#grid>.cell{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: crosshair;
 }
