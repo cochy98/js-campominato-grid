@@ -10,7 +10,7 @@
 // Mi richiamo il bottone tramite 'querySelector'
 const playBtn = document.querySelector('#play');
 
-// Aggiungo un evento al click del bottone
+// Avvio una nuova partita al click del pulsante play
 playBtn.addEventListener('click', function(){
     newGame ();
 });  
@@ -37,13 +37,17 @@ function newGame (){
     let gridElements;
     let gridRow;
 
+    // Vado a richiamare tramite ID il div 'grid'
+    const grid = document.getElementById('grid');
+
+    // Faccio un reset ad ogni nuova partita
+    grid.innerHTML = "";
+
     // Quando clicco sul bottone seleziono il livello di difficoltà associato
     const levelDifficult = document.getElementById('level-difficult').value;
     // E ne visualizzo il valore in console
     console.log(`Livello di difficoltà selezionato: ${levelDifficult}`);
     
-    // Vado a richiamare tramite ID il div 'grid'
-    const grid = document.getElementById('grid');
     
     // Controllo il livello di difficoltà e imposto un limite di celle
     switch (levelDifficult){
@@ -52,11 +56,11 @@ function newGame (){
             gridElements = 100;
             break;
         case 'medium':
-        gridElements = 81;
-        break;
+            gridElements = 81;
+            break;
         case 'hard':
-        gridElements = 49;
-        break;
+            gridElements = 49;
+            break;
     }
 
     gridRow = Math.sqrt(gridElements);
@@ -71,6 +75,7 @@ function newGame (){
             this.classList.toggle('active');
         });
 
+        // Aggiungo la cella appena creata alla griglia
         grid.appendChild(currentCell);
     }
 }
