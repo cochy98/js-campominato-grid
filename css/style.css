@@ -31,12 +31,16 @@ footer > p{
 }
 
 #grid>.cell{
-    width: calc(100% / 10);
-    height: calc(100% / 10);
+    /* width: calc(100% / 10);
+    height: calc(100% / 10); */
     border: 2px solid white;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: crosshair;
+}
+
+#grid>.cell.active{
+    background-color: rgb(223, 19, 19);
 }
